@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F72D6E03-13BD-4CA2-9771-55EE43A59F80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fittings</RootNamespace>
+    <AssemblyName>Fittings</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\MainIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\Debug\lib\DevExpress.Data.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.Images.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.Office.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.Pdf.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.Printing.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.Utils.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.XtraBars.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.XtraEditors.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.XtraGrid.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.XtraLayout.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.XtraPrinting.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>bin\Debug\lib\DevExpress.XtraRichEdit.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cards\ComponentGroupCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\ComponentGroupCard.Designer.cs">
+      <DependentUpon>ComponentGroupCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\EditFittingCountCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\EditFittingCountCard.Designer.cs">
+      <DependentUpon>EditFittingCountCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\EquipmentCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\EquipmentCard.Designer.cs">
+      <DependentUpon>EquipmentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\ProjectEquipmentCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\ProjectEquipmentCard.Designer.cs">
+      <DependentUpon>ProjectEquipmentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Computing\Expenses.cs" />
+    <Compile Include="Connections\Connection.cs" />
+    <Compile Include="Connections\ReadConnection.cs" />
+    <Compile Include="ConnectionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionWindow.Designer.cs">
+      <DependentUpon>ConnectionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Computing\Constants.cs" />
+    <Compile Include="ConstantWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstantWindow.Designer.cs">
+      <DependentUpon>ConstantWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FittingCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FittingCard.Designer.cs">
+      <DependentUpon>FittingCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Handbooks.Designer.cs">
+      <DependentUpon>Handbooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportWindow.Designer.cs">
+      <DependentUpon>ImportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageToDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageToDeveloper.Designer.cs">
+      <DependentUpon>MessageToDeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AddFittingModel.cs" />
+    <Compile Include="Model\ComponentGroupModel.cs" />
+    <Compile Include="Model\EmailModel.cs" />
+    <Compile Include="Model\EquipmentModel.cs" />
+    <Compile Include="Model\FittingModel.cs" />
+    <Compile Include="Model\FittingToBriefcaseModel.cs" />
+    <Compile Include="Model\GridSettings.cs" />
+    <Compile Include="Model\ProjectEquipmentModel.cs" />
+    <Compile Include="Model\SelectFittingModel.cs" />
+    <Compile Include="OneFitting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OneFitting.Designer.cs">
+      <DependentUpon>OneFitting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="ProjectCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectCard.Designer.cs">
+      <DependentUpon>ProjectCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectStrings.en-US.Designer.cs">
+      <DependentUpon>ProjectStrings.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Database\SqlMethods.cs" />
+    <Compile Include="UI\GridControlUIModifications.cs" />
+    <Compile Include="UI\Informations.cs" />
+    <Compile Include="UI\UserCulture.cs" />
+    <Compile Include="UpdateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateWindow.Designer.cs">
+      <DependentUpon>UpdateWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\AboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\AboutWindow.Designer.cs">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\BriefcaseCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\BriefcaseCard.Designer.cs">
+      <DependentUpon>BriefcaseCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\SearchEquipmentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\SearchEquipmentWindow.Designer.cs">
+      <DependentUpon>SearchEquipmentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\SelectBriefcaseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\SelectBriefcaseWindow.Designer.cs">
+      <DependentUpon>SelectBriefcaseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\SelectItemWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\SelectItemWindow.Designer.cs">
+      <DependentUpon>SelectItemWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\SplashWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\SplashWindow.Designer.cs">
+      <DependentUpon>SplashWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cards\ComponentGroupCard.resx">
+      <DependentUpon>ComponentGroupCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\EditFittingCountCard.en.resx">
+      <DependentUpon>EditFittingCountCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\EditFittingCountCard.resx">
+      <DependentUpon>EditFittingCountCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\EquipmentCard.resx">
+      <DependentUpon>EquipmentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\ProjectEquipmentCard.resx">
+      <DependentUpon>ProjectEquipmentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionWindow.en-US.resx">
+      <DependentUpon>ConnectionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionWindow.resx">
+      <DependentUpon>ConnectionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstantWindow.resx">
+      <DependentUpon>ConstantWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FittingCard.en-US.resx">
+      <DependentUpon>FittingCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FittingCard.resx">
+      <DependentUpon>FittingCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.en-US.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Handbooks.en-US.resx">
+      <DependentUpon>Handbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Handbooks.en.resx">
+      <DependentUpon>Handbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Handbooks.resx">
+      <DependentUpon>Handbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportWindow.en-US.resx">
+      <DependentUpon>ImportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportWindow.resx">
+      <DependentUpon>ImportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageToDeveloper.en-US.resx">
+      <DependentUpon>MessageToDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageToDeveloper.resx">
+      <DependentUpon>MessageToDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneFitting.en-US.resx">
+      <DependentUpon>OneFitting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneFitting.resx">
+      <DependentUpon>OneFitting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectCard.en-US.resx">
+      <DependentUpon>ProjectCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectCard.resx">
+      <DependentUpon>ProjectCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectStrings.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProjectStrings.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProjectStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UpdateWindow.resx">
+      <DependentUpon>UpdateWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\AboutWindow.en.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\AboutWindow.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\BriefcaseCard.en.resx">
+      <DependentUpon>BriefcaseCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\BriefcaseCard.resx">
+      <DependentUpon>BriefcaseCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\SearchEquipmentWindow.resx">
+      <DependentUpon>SearchEquipmentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\SelectBriefcaseWindow.en.resx">
+      <DependentUpon>SelectBriefcaseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\SelectBriefcaseWindow.resx">
+      <DependentUpon>SelectBriefcaseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\SelectItemWindow.en.resx">
+      <DependentUpon>SelectItemWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\SelectItemWindow.resx">
+      <DependentUpon>SelectItemWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\SplashWindow.en.resx">
+      <DependentUpon>SplashWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\SplashWindow.resx">
+      <DependentUpon>SplashWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Fittings.Model.FittingToBriefcaseModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Import-Text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DB-First.png" />
+    <Resource Include="Resources\DB-Last.png" />
+    <Resource Include="Resources\DB-Next.png" />
+    <Resource Include="Resources\DB-Previous.png" />
+    <Resource Include="Resources\Execute.png" />
+    <Resource Include="Resources\Exit.png" />
+    <Resource Include="Resources\Export_16.png" />
+    <Resource Include="Resources\Minus_16.png" />
+    <Resource Include="Resources\Move-Up_16.png" />
+    <Resource Include="Resources\Plus_16.png" />
+    <Resource Include="Resources\Pushup_16.png" />
+    <Resource Include="Resources\Reset_16.png" />
+    <Resource Include="Resources\Save.png" />
+    <Resource Include="Resources\Select_16.png" />
+    <Resource Include="Resources\Settings.png" />
+    <Resource Include="Resources\Text-Context_16.png" />
+    <Resource Include="Resources\Text-FirstLetters_16.png" />
+    <Resource Include="Resources\Unselect_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\News.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\13.gif" />
+    <Content Include="Resources\35.gif" />
+    <Content Include="Resources\42.gif" />
+    <Content Include="Resources\43102.png" />
+    <Content Include="Resources\89.gif" />
+    <Content Include="Resources\acrobatreader.png" />
+    <Content Include="Resources\business.ico" />
+    <Content Include="Resources\Clock_16.png" />
+    <Content Include="Resources\comment.ico" />
+    <Content Include="Resources\comment.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\excel_2003_01.png" />
+    <Content Include="Resources\export.ico" />
+    <Content Include="Resources\export.png" />
+    <Content Include="Resources\Export_16.ico" />
+    <Content Include="Resources\Filter-Advanced_16.png" />
+    <Content Include="Resources\Filter_16.png" />
+    <Content Include="Resources\Find_16.png" />
+    <Content Include="Resources\icons8-разгруппировать-объекты-32.png" />
+    <Content Include="Resources\icons8-сгруппировать-объекты-32.png" />
+    <Content Include="Resources\Import-Text.ico" />
+    <Content Include="Resources\import.ico" />
+    <Content Include="Resources\import.png" />
+    <Content Include="Resources\MainIcon.ico" />
+    <Content Include="Resources\refresh_arrows_14418.ico" />
+    <Content Include="Resources\Report-Wizard_16.ico" />
+    <Content Include="Resources\Report-Wizard_16.png" />
+    <Content Include="Resources\Report1_16.png" />
+    <Content Include="Resources\Report_16.png" />
+    <Content Include="Resources\xls.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
